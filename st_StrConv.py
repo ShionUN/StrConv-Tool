@@ -2,6 +2,18 @@ import streamlit as st
 import jaconv
 
 def main():
+    # ページ設定
+    st.set_page_config(
+        page_title="全角・半角変換ツール - Streamlit",
+        page_icon="🧊",
+        layout="centered",
+        initial_sidebar_state="auto",
+        menu_items={
+            'About': "### 全角・半角変換ツール (beta)"
+        }   
+    )
+
+    # 概要説明
     st.title("全角・半角変換ツール")
     st.write("半角文字を全角文字に、または全角文字を半角文字に変換します。")
 
