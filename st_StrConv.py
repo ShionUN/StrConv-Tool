@@ -1,6 +1,6 @@
 import streamlit as st
 import jaconv
-import subprocess
+import pandas as pd
 
 def main():
     st.title("全角・半角変換ツール")
@@ -49,7 +49,8 @@ def main():
     st.write("変換結果:")
     st.info(result)
     if st.button('Copy'):
-        subprocess.run("clip", input=result, text=True)
+        df = pd.DataFrame([result])
+        df.to_clipboard(index=False, header=False)
         st.write("クリップボードにコピーしました！")
 
 if __name__ == "__main__":
