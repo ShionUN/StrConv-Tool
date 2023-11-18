@@ -1,6 +1,5 @@
 import streamlit as st
 import jaconv
-import pandas as pd
 
 def main():
     st.title("全角・半角変換ツール")
@@ -45,13 +44,9 @@ def main():
             case '仮名だけ':
                 result = jaconv.z2h(jaconv.hira2kata(input_text), kana=True, digit=False, ascii=False)
 
-
+    # 結果を表示
     st.write("変換結果:")
-    st.info(result)
-    if st.button('Copy'):
-        df = pd.DataFrame([result])
-        df.to_clipboard(index=False, header=False)
-        st.write("クリップボードにコピーしました！")
+    st.code(result)
 
 if __name__ == "__main__":
     main()
