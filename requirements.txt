@@ -1,3 +1,2 @@
 streamlit
 jaconv
-PyQt6
