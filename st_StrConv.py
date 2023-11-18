@@ -46,7 +46,7 @@ def main():
 
     # 結果を表示
     st.write("変換結果:")
-    st.code(result)
+    st.code(result, language="csv")    # プレーンテキストに近い言語形式
 
 if __name__ == "__main__":
     main()
