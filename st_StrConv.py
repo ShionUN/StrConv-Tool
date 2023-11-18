@@ -6,7 +6,7 @@ def main():
     st.write("半角文字を全角文字に、または全角文字を半角文字に変換します。")
 
     # テキスト入力
-    input_text = st.text_input("テキストを入力してください:")
+    input_text = st.text_area("テキストを入力してください:")
 
     # 変換方向
     option1 = st.radio(
