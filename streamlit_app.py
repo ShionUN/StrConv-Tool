@@ -31,11 +31,12 @@ def main():
 
     if option1 == "正規化":
         # 正規化形式
-        option2 = st.radio(
-            "Unicode正規化形式",
+        option2 = st.selectbox(
+            "正規化形式を選択してください：",
             ["NFD", "NFC", "NFKD", "NFKC"],
-            horizontal=True
+            index = 3
         )
+        
         # 正規化
         result = unicodedata.normalize(option2, input_text)
 
