@@ -65,7 +65,7 @@ def main():
          # 結果を表示
         st.markdown("***")
         st.markdown("#### 結果")
-        st.code(result, language="csv")    # プレーンテキストに近い言語形式
+        st.code(result, language=None)
 
 if __name__ == "__main__":
     main()
