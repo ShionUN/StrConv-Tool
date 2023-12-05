@@ -1,4 +1,5 @@
 import streamlit as st
+import budoux
 import habachen
 import unicodedata
 
@@ -14,9 +15,12 @@ def main():
         }   
     )
 
+    # budoux読み込み
+    parser = budoux.load_default_japanese_parser()
+
     # 概要説明
     st.title("全角・半角変換ツール")
-    st.write("半角と全角の相互変換とUnicode正規化に対応しています。")
+    st.write(f"{parser.parse("半角と全角の相互変換とUnicode正規化に対応しています。")}", unsafe_allow_html=True)
 
     # テキスト入力
     input_text = st.text_area("テキストを入力してください：")
