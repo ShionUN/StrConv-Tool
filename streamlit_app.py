@@ -20,7 +20,7 @@ def main():
 
     # 概要説明
     st.title("全角・半角変換ツール")
-    st.write(f"{parser.parse("半角と全角の相互変換とUnicode正規化に対応しています。")}", unsafe_allow_html=True)
+    st.write(f'{parser.parse("半角と全角の相互変換とUnicode正規化に対応しています。")}', unsafe_allow_html=True)
 
     # テキスト入力
     input_text = st.text_area("テキストを入力してください：")
