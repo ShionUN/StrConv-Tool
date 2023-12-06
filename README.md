@@ -1,4 +1,8 @@
-# StrConv-Tool
+# Various Tools
 
 ## Page
-<https://strconv-tool.streamlit.app/>
+<https://various-tools-ja.streamlit.app/>
+
+## Contents
+- StrConv Tools
+- StrCount Tools
