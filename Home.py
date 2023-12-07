@@ -22,10 +22,10 @@ def main():
 
     st.markdown("""
         ***
-        #### StrConv
+        #### [StrConv](https://various-tools-ja.streamlit.app/StrConv)
             全角・半角文字の相互変換や、Unicode正規化が行えるツールです。
         ***
-        #### StrCount
+        #### [StrCount](https://various-tools-ja.streamlit.app/StrCount)
             文章の文字数をチェックできるツールです。
     """)
 
