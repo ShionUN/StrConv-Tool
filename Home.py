@@ -15,27 +15,20 @@ def main():
             "About": "### 便利ツール集 (beta)"
         }
     )
-
+    
     st.title("ようこそ！")
-    st.write("鋭意製作中です…")
-    st.write(f'{parser.translate_html_string("現時点で作成したツールは、左のサイドメニューから移動できます。")}', unsafe_allow_html=True)
+    st.write(f'{parser.translate_html_string("以下が、現時点で作成したツールです。（鋭意製作中…）")}', unsafe_allow_html=True)
+    st.markdown("***")
     
-    # test st.switch_page
-    if st.button("Home"):
-        st.switch_page("main.py")
-    if st.button("StrConv"):
+    # introduction of each page
+    if st.button("StrConv Tool", type="primary"):
         st.switch_page("pages/1_↔️_StrConv.py")
-    if st.button("StrCount"):
-        st.switch_page("pages/2_📝_StrCount.py")
+    st.write(f'{parser.translate_html_string("全角・半角文字の相互変換や、Unicode正規化を行うことができます。")}', unsafe_allow_html=True)
     
-    st.markdown("""
-        ***
-        #### [StrConv](https://various-tools-ja.streamlit.app/StrConv)
-            全角・半角文字の相互変換や、Unicode正規化が行えるツールです。
-        ***
-        #### [StrCount](https://various-tools-ja.streamlit.app/StrCount)
-            文章の文字数をチェックできるツールです。
-    """)
+    st.markdown("***")
+    if st.button("StrCount Tool",type="primary"):
+        st.switch_page("pages/2_📝_StrCount.py")
+    st.write(f'{parser.translate_html_string("文章の文字数をチェックできます。")}', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
