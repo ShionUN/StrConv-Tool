@@ -26,7 +26,7 @@ def main():
     if st.button("StrConv"):
         st.switch_page("pages/1_↔️_StrConv.py")
     if st.button("StrCount"):
-        st.switch_page("pages/2_📝_StrCount.py")[
+        st.switch_page("pages/2_📝_StrCount.py")
     
     st.markdown("""
         ***
