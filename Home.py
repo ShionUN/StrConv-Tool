@@ -19,7 +19,15 @@ def main():
     st.title("ようこそ！")
     st.write("鋭意製作中です…")
     st.write(f'{parser.translate_html_string("現時点で作成したツールは、左のサイドメニューから移動できます。")}', unsafe_allow_html=True)
-
+    
+    # test st.switch_page
+    if st.button("Home"):
+        st.switch_page("main.py")
+    if st.button("StrConv"):
+        st.switch_page("pages/1_↔️_StrConv.py")
+    if st.button("StrCount"):
+        st.switch_page("pages/2_📝_StrCount.py")[
+    
     st.markdown("""
         ***
         #### [StrConv](https://various-tools-ja.streamlit.app/StrConv)
