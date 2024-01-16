@@ -90,5 +90,5 @@ result3 = unicodedata.normalize(option_norm, input_text)
 if result3:
     # 結果を表示
     tab3.markdown("***")
-    tab3.markdown("##### 結果")
+    tab3.markdown("#### 結果")
     tab3.code(result3, language=None)
