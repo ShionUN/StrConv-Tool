@@ -4,5 +4,6 @@
 <https://various-tools-ja.streamlit.app/>
 
 ## Contents
-- StrConv Tools
-- StrCount Tools
+- StrConv Tool
+- StrCount Tool
+- QRCreate Tool
