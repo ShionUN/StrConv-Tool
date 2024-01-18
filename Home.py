@@ -29,6 +29,11 @@ def main():
     if st.button("StrCount Tool",type="primary"):
         st.switch_page("pages/2_📝_StrCount.py")
     st.write(f'{parser.translate_html_string("文章の文字数をチェックできます。")}', unsafe_allow_html=True)
+    
+    st.markdown("***")
+    if st.button("QRCreate Tool",type="primary"):
+        st.switch_page("pages/3_📎_QRCreate.py")
+    st.write(f'{parser.translate_html_string("URL等の文字列をQRコードに変換できます。")}', unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
