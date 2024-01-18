@@ -1,3 +1,4 @@
 streamlit
 budoux
 habachen
+qrcode
