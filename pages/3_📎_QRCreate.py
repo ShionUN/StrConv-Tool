@@ -43,7 +43,7 @@ st.markdown(
 )
 
 # Slidebar of Resizing
-size = st.slider('サイズ調整', 3, 20, 10)
+size = st.slider('サイズ調整', 3, 20, 6)
 
 # Create QR
 qr = qrcode.QRCode(box_size = size)
