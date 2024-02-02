@@ -7,12 +7,14 @@ import unicodedata
 parser = budoux.load_default_japanese_parser()
 
 # 概要説明
-st.title("全角・半角変換ツール")
+col1, col2 = st.columns([5, 1])
+col1.title("全角・半角変換ツール")
+col2.page_link("Home.py", label="Home", icon="🔙")
 st.write(f'{parser.translate_html_string("半角と全角の相互変換とUnicode正規化に対応しています。")}', unsafe_allow_html=True)
 
 # テキスト入力
 input_text = st.text_area(
-    "テキストを入力してください：",
+    "Input",
     height=95,
     placeholder="ここにテキストを入力…",
     label_visibility="collapsed"

@@ -3,13 +3,15 @@ import qrcode
 from PIL import Image
 
 # Title
-st.title('QRコード生成ツール')
+col1, col2 = st.columns([5, 1])
+col1.title('QRコード生成ツール')
+col2.page_link("Home.py", label="Home", icon="🔙")
 
 # Input
-URL = st.text_input('変換URL入力', 
+URL = st.text_area('Input', 
                     help="URLじゃなくてもOK！", 
-                    placeholder="ここに QRコード化したい文字列を入力！ 例: https://various-tools-ja.streamlit.app/"
-                    )
+                    placeholder="ここにURL等を入力！\n例: https://various-tools-ja.streamlit.app/",
+                    label_visibility="collapsed")
 fill_color = "whitesmoke"
 
 # Default
@@ -17,8 +19,31 @@ if URL == "":
     URL = "https://various-tools-ja.streamlit.app/"
     fill_color = "dimgray"
 
+# Style
+st.markdown(
+    """
+    <style>
+        div[data-testid=stSlider] > * {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+        }
+
+        div[data-testid=stImage]{
+            display: block;
+            margin: 0 auto;
+        }
+        
+        div[data-testid=stDownloadButton] button {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+    """, unsafe_allow_html=True
+)
+
 # Slidebar of Resizing
-size = st.slider('Resize', 3, 20, 10)
+size = st.slider('サイズ調整', 3, 20, 10)
 
 # Create QR
 qr = qrcode.QRCode(box_size = size)
@@ -27,3 +52,12 @@ _img = qr.make_image(fill_color=fill_color, back_color="TransParent")  # TransPa
 _img.save('qrcode.png')
 img = Image.open('qrcode.png')
 st.image(img)
+
+# Download button of QR image
+with open("qrcode.png", "rb") as file:
+    btn = st.download_button(
+            label="画像として保存",
+            data=file,
+            file_name="qrcode.png",
+            mime="image/png"
+          )
