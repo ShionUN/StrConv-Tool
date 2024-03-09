@@ -7,12 +7,12 @@ parser = budoux.load_default_japanese_parser()
 def main():
     # ページ設定
     st.set_page_config(
-        page_title="便利ツール集 - Streamlit",
+        page_title="ツール集",
         page_icon="🧊",
         layout="centered",
         initial_sidebar_state="auto",
         menu_items={
-            "About": "### 便利ツール集 (beta)"
+            "About": "### ツール集 (beta)"
         }
     )
     
