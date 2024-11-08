@@ -20,7 +20,7 @@ if URL == "":
     fill_color = "dimgray"
 
 # Style
-st.markdown(
+st.html(
     """
     <style>
         div[data-testid=stSlider] > * {
@@ -29,7 +29,7 @@ st.markdown(
             width: 50%;
         }
 
-        div[data-testid=stImage]{
+        div[data-testid=stFullScreenFrame] > * {
             display: block;
             margin: 0 auto;
         }
@@ -39,7 +39,7 @@ st.markdown(
             margin: 0 auto;
         }
     </style>
-    """, unsafe_allow_html=True
+    """
 )
 
 # Slidebar of Resizing
